@@ -23,8 +23,10 @@ Required:
         default: us-central1-f
 
 --name  The name of the instance
+        default: demo-instance
 
 --ports A comma seperated list of ports to forward to the instance
+        default: 8080
 
 ```
 
