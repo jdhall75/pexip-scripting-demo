@@ -1,13 +1,14 @@
 # Deploy a small python app to GCP Compute
 
-The tool used to deploy the app is `gcp.py`.  I borrowed some example code from GCP to get started.  Then sprinkled
-my own changes onto it.  There are a list of things that I would like to add to it below.
+The tool used to deploy the app is `gcp.py`. I borrowed some example code from GCP to get started. Then sprinkled
+my own changes onto it. There are a list of things that I would like to add to it below.
 
 ## Invocation
+
 ```
 usage: gcp.py [-h] [--zone ZONE] [--name NAME] [--ports PORTS] project_id bucket_name
 
-Required: 
+Required:
     project_id: The project ID you would like to deploy a compute instance for
 
     bucket_name: an intermediate bucket to hold the application before deploying to the instance.
@@ -27,4 +28,7 @@ Required:
 
 ```
 
+## TODO
 
+- The fluent client is install on the host so I am getting syslogs from the server. I would like to query those logs from Cloud Logs and display them as the server boots up.
+- I have used skaffold before for Kubernetes. There are a lot of paralles between launching a container on kubernets and launching a VM on GCP compute. I would like to build an underlay / overlay engine to deploy workloads. Being able to define a base then an override to customize your deployment is very powerful. Skaffold is an amazing tool and I would like to see something like it for workig with VMs in the cloud.
