@@ -1,7 +1,7 @@
 # Deploy a small python app to GCP Compute
 
 The tool used to deploy the app is `gcp.py`. I borrowed some example code from GCP to get started. This script Zips up the app directory and
-uploads it to Cloud Storage. The VM pick it up from cloud storage, using the meta server to get the file name and bucket.
+uploads it to Cloud Storage. The VM picks it up from cloud storage using the meta server to get the file name and bucket.
 
 There are a list of things that I would like to add to it below.
 
